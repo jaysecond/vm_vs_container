@@ -1,0 +1,321 @@
+<!--
+  CIS 480 VM vs Container DSS
+  Gil, Dom, Joy
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>VM Container</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/portfolio-item.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">VM vs Container</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!--  Row -->
+    <div class="row">
+      <!-- COL -->
+      <div class="col-md-8">
+        <!-- Portfolio Item Heading -->
+        <h1 class="my-4 text-center"> Enter your Parameters
+        </h1>
+        <h4 class="my-4 text-center">Please choose which criteria is more important on the left. Choose how much more important it is on the right</h2>
+        <form id="vmForm">
+          <table class="table table-hover">
+            <thead class="text-center">
+              <tr>
+                <td></td>
+                <td>A - Importance or B?</td>
+                <td>Equal</td>
+                <td>How much more?</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  <label class="radio-inline"><input type="radio" name="crit1" value="1" checked>Power Usage</label> or
+                  <label class="radio-inline"><input type="radio" name="crit1" value="2">Learning Curve</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val1" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val1" type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val1" type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val1" type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val1" type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val1" type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val1" type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val1" type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val1" type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit2" type="radio" value="1" checked>Power Usage</label> or
+                  <label class="radio-inline"><input name="crit2" type="radio" value="3">Start & Stop Time</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val2" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val2" type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val2" type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val2" type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val2" type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val2" type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val2" type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val2" type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val2" type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  3
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit3" type="radio" value="1" checked>Power Usage</label> or
+                  <label class="radio-inline"><input name="crit3" type="radio" value="4">Security</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input type="radio" name="val3" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val3" type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val3" type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val3" type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val3" type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val3" type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val3" type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val3" type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val3" type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  4
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit4" type="radio" value="1" checked>Power Usage</label> or
+                  <label class="radio-inline"><input name="crit4" type="radio" value="5">Portability</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val4" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input type="radio"name="val4" value="2">2</label>
+                  <label class="radio-inline"><input type="radio"name="val4" value="3">3</label>
+                  <label class="radio-inline"><input type="radio"name="val4" value="4">4</label>
+                  <label class="radio-inline"><input type="radio"name="val4" value="5">5</label>
+                  <label class="radio-inline"><input type="radio"name="val4" value="6">6</label>
+                  <label class="radio-inline"><input type="radio"name="val4" value="7">7</label>
+                  <label class="radio-inline"><input type="radio"name="val4" value="8">8</label>
+                  <label class="radio-inline"><input type="radio"name="val4" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  5
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit5" type="radio" value="2" checked>Learning Curve</label> or
+                  <label class="radio-inline"><input name="crit5" type="radio" value="3">Start & Stop Time</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val5" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val5" type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val5" type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val5" type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val5" type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val5" type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val5" type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val5" type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val5" type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  6
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit6" type="radio" value="2" checked>Learning Curve</label> or
+                  <label class="radio-inline"><input name="crit6" type="radio" value="4">Security</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val6" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val6" type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val6" type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val6" type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val6" type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val6" type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val6" type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val6" type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val6" type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  7
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit7" type="radio" value="2" checked>Learning Curve</label> or
+                  <label class="radio-inline"><input name="crit7" type="radio" value="5">Portability</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val7" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val7" type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val7" type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val7" type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val7" type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val7" type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val7" type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val7" type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val7" type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  8
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit8" type="radio" value="3" checked>Start & Stop Time</label> or
+                  <label class="radio-inline"><input name="crit8" type="radio" value="4">Security</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val8" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val8" type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val8" type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val8" type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val8" type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val8" type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val8" type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val8" type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val8" type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  9
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit9" type="radio" value="3" checked>Start & Stop Time</label> or
+                  <label class="radio-inline"><input name="crit9" type="radio" value="5">Portability</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val9" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val9"type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val9"type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val9"type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val9"type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val9"type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val9"type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val9"type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val9"type="radio" value="9">9</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  10
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="crit10" type="radio" value="4" checked>Security</label> or
+                  <label class="radio-inline"><input name="crit10" type="radio" value="5">Portability</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val10" type="radio" value="1" checked>1</label>
+                </td>
+                <td>
+                  <label class="radio-inline"><input name="val10"type="radio" value="2">2</label>
+                  <label class="radio-inline"><input name="val10"type="radio" value="3">3</label>
+                  <label class="radio-inline"><input name="val10"type="radio" value="4">4</label>
+                  <label class="radio-inline"><input name="val10"type="radio" value="5">5</label>
+                  <label class="radio-inline"><input name="val10"type="radio" value="6">6</label>
+                  <label class="radio-inline"><input name="val10"type="radio" value="7">7</label>
+                  <label class="radio-inline"><input name="val10"type="radio" value="8">8</label>
+                  <label class="radio-inline"><input name="val10"type="radio" value="9">9</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <center>
+            <button id="submit" type="button" class="btn btn-success center-block">Submit</button>
+          </center>
+        </form>
+      </div>
+      <!-- COL -->
+      <div class="col-md-8">
+        <h1 class="my-4 text-center" id="results"></h1>
+        <table class="table" id="log"></table>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; CIS 480 2017</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="./getRadios.js"></script>
+
+</body>
+
+</html>
